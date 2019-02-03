@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>sample code</title>
+        <link herf='main.css' rel="sylesheet">
+    </head>
+    <body> 
+        <div id='app'>
+            <!-- 単純なデータバインド -->
+            <p>Hellot {{ message }}</p>
+
+            <!-- vueを使ったループ処理-->
+            <ol>
+                <li v-for='item in list'>{{item}}</li>
+            </ol>
+
+            <!-- クリック処理 -->
+            <button v-on:click='handleClick'>Click</button>
+
+            <!-- 入力 -->
+            <input v-model='message'>
+
+            <p>{{count}}</p>
+            <input v-model.number="count">
+            
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+        <script src='./1-5.js'></script>
+    </body>
+</html>
