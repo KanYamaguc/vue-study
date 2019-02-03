@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>sample code</title>
-        <link herf='main.css' rel="sylesheet">
+        <link href='./1-5.css' rel="stylesheet">
     </head>
     <body> 
         <div id='app'>
@@ -11,6 +11,8 @@
             <p>Hellot {{ message }}</p>
 
             <!-- vueを使ったループ処理-->
+            <!-- for console : `app.list.add("hoge")` or `app.pop()`-->
+            <p>test v-for : app.list </p>
             <ol>
                 <li v-for='item in list'>{{item}}</li>
             </ol>
@@ -23,7 +25,16 @@
 
             <p>{{count}}</p>
             <input v-model.number="count">
+
+            <!--条件分岐-->
+            <!-- for console : `app.show=false` or `app.show=true`-->
+            <p v-if='show'> param : app.show </p>
             
+            <!-- トランジッション&アニメーション -->
+            <button v-on:click="show2=!show2">切り替え</button>
+            <transition>
+                <p v-if="show2">transiton test</p>
+            </transition>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
         <script src='./1-5.js'></script>

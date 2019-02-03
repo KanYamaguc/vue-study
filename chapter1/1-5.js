@@ -3,7 +3,9 @@ var app = new Vue({
     data : {
         message: 'Vue.js!',
         list : ['りんご', 'バナナ', 'いちご'],
-        count : 0
+        count : 0,
+        show : true,
+        show2 : true
     },
 
     methods : {
